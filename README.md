@@ -1,2 +1,5 @@
-# jogo-da-memoria
+# Jogo da Memoria
+
+> ⚙️Em desenvolvimento.....
+
 
