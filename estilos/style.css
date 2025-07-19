@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400..700&display=swap');
+
+/*Variáveis*/
+:root {
+    --fonte-principal:"JetBrains Mono", monospace;
+    --fonte-secundaria: "Miriam Libre", sans-serif;
+
+    --cor-de-fundo:#FAF7F3;
+    --cor-cartas:#DCC5B2;
+    --cor-textos: #D9A299;
+}
+
+body{
+    margin: 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    font-family: var(--fonte-principal);
+    font-size: 37px;
+    text-align: center;
+    color: var(--cor-textos);
+    margin: 20px;
+}
+
+.container-cartas{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.cartas {
+    height: 180px;
+    width: 200px;
+    background-color: var(--cor-cartas);
+    align-items: center;
+    border-radius: 8px;
+    position: relative;
+    perspective: 1000px; /*Para que a rotação pareça tridimensional. Sem isso, a rotação pareceria plana.*/
+    transform-style: preserve-3d; /*Garante que os elementos filhos (face-tras, face-frente) sejam renderizados no espaço 3D do seu pai  */
+    transition: transform 0.6s ease-out;  /* Transição suave para o giro */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cartas:hover{
+    transform: rotateY(180deg); 
+}
+
+.face-carta {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.verso-carta {
+    background-color: var(--cor-cartas);
+    transform: rotateY(0deg);
+}
+
+.face-frente {
+    background-color: var(--cor-cartas);
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+
+.cartas:hover .face-frente .cartas-selecionadas .face-frente {
+    opacity: 1;
+}
+
+.cartas-selecionadas {
+    border: 3px solid red;
+    transform: rotateY(180deg);
+}
+
+footer {
+    color: var(--cor-textos);
+    font-family: var(--fonte-principal);
+}
+
+footer > p > a{
+    color:var(--cor-textos);
+    font-family: var(--fonte-principal);
+}
