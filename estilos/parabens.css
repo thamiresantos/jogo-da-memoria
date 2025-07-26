@@ -1,0 +1,94 @@
+@import url(style.css);
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--cor-cartas);
+    height: 250px;
+    width: 550px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 50px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; /* Faz com que elementos com position: absolute dentro dele se posicionem em relação a ele */
+}
+
+.container > p {
+  
+    font-size: 19px;
+    font-family: var(--fonte-secundaria);
+    font-weight: bold;
+    padding: 5px;
+}
+
+
+.container > div { 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    width: 100%; 
+   
+}
+
+.botao {
+    height: 60px;
+    width: 140px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    background-color: var( --cor-textos);
+    font-family: var(--fonte-secundaria);
+    font-weight: bold;
+    margin: 12px;
+    box-shadow:4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.botao:hover {
+    color: white;
+    background-color:  #4CAF50;;
+    box-shadow: none;
+}
+
+#fugitivo-botao {
+    
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    cursor: pointer;
+    position: absolute; /* Essencial para poder mover o botão livremente */
+    transition: transform 0.1s ease-out; /* Transição suave para o movimento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#fugitivo-botao:active {
+    background-color: #4e3de5; /* Um pouco mais escuro ao clicar, se conseguir! */
+}
+
+#fugitivo-botao:hover {
+    background-color: #e60000;
+}
+
+#fugitivo-botao:active {
+    background-color: #cc0000;
+}
+
+.link-botao {
+    text-decoration: none;
+    color: black;
+}
