@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-const imgCartas = [
+document.addEventListener('DOMContentLoaded', () => { //DOMContentLoaded - garante que a função só vai começar depois que o navegador tiver lido o html primeiro.
+const imagensCartas = [
     'estilos/imagens/cachorro-amarelo.png',
     'estilos/imagens/cachorro-marrom.png',
     'estilos/imagens/cachorro-preto.png',
@@ -12,4 +12,3 @@ const imgEmbaralhadas = [...imgCartas, ...imgCartas];
 
  
 });
-
