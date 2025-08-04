@@ -17,5 +17,13 @@ function embaralhar (array) { // usando a lógica do algoritimo fisher-yates
   [array[i], array[j] = [array[j], array[i]]];
 }
 
- 
+embaralhar (imgEmbaralhadas)
+
+//variáveis de estado do jogo
+let primeiraCarta = null; //armazena a primeira carta clicada
+let segundaCarta = null; //armazena a segunda carta clicada
+let bloquearTabuleiro = false //impede cliques durante a comparação
+let paresEncontrados = 0; // contador de pares encontrados
+
+
 });
