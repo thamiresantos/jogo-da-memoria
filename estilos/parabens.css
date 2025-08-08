@@ -101,4 +101,8 @@ body {
         width: 300px;
        
     }
+
+    #fugitivo-botao {
+        display: none;
+    }
 }
