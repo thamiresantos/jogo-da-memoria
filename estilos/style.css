@@ -107,3 +107,25 @@ footer > p > a {
 footer > p > a:hover {
     color: var(--cor-cartas)
 }
+
+
+/*--- RESPONSIVO ---*/
+@media (max-width: 500px) {
+    .titulo {
+        font-size: 29px;
+    }
+
+    .container-cartas{ 
+    grid-template-columns: repeat(3, 100px);
+    gap: 13px;
+    }
+
+    .cartas {
+    height: 100px;
+    width: 100px;
+    }
+
+    footer , footer > a {
+        font-size: 14px;
+    }
+}
